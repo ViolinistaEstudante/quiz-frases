@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Quiz sobre o site de frases!!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Quiz sobre o site de frases!!</h1>
+            <div id="question"></div>
+            <div id="options"></div>
+            <button id="nextBtn" onclick="nextQuestion()">Próxima</button>
+            <div id="feedback" class="feedback"></div>
+            <div id="endMessage" class="end-message"></div>
+            <div id="nameInput" class="name-input" style="display: none;">
+                <input type="text" id="playerName" placeholder="Digite seu nome" />
+                <button onclick="saveScore()">Salvar Recorde</button>
+            </div>
+            <div class="scoreboard"></div>
+        </div>
+        </div>
+    </div>
+
+    <div class="scoreboard-card">
+        <h2>Quadro de Recordes</h2>
+        <div id="scoreboard" class="scoreboard"></div>
+        <button onclick="clearScores()">Limpar Recordes</button>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

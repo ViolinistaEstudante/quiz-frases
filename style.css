@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2f59da; /* Fundo azul */
+    font-family: "Halant", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white; /* Card branco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.scoreboard-card {
+    background-color: white; /* Card branco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: left; /* Alinhamento à esquerda para o quadro de recordes */
+    margin-left: 40px; /* Distância maior entre os cards */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1ea1ac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Halant", sans-serif;
+}
+
+button:hover {
+    background-color: #0d7079;
+}
+
+.option {
+    display: block;
+    margin: 10px 0; /* Espaçamento entre opções */
+    padding: 10px;
+    background-color: #1ea1ac;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Halant", sans-serif;
+}
+
+.option:hover {
+    background-color: #0d7079;
+    transition: 0.4s;
+}
+
+.feedback {
+    margin-top: 10px;
+    font-weight: bold;
+    height: 20px; /* Para manter o espaço para feedback */
+    font-family: "Halant", sans-serif;
+}
+
+.end-message {
+    margin-top: 20px; /* Espaço acima da mensagem */
+    margin-bottom: 20px; /* Espaço abaixo da mensagem */
+    font-weight: bold;
+    color: #FF0000; /* Cor da mensagem de fim */
+    font-size: 18px; /* Tamanho da fonte */
+    font-family: "Halant", sans-serif;
+}
+
+.name-input input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 22px); /* Largura total menos o padding */
+    border: 2px solid #007BFF; /* Borda azul */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Espaço abaixo do input */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: border-color 0.3s; /* Transição suave na borda */
+}
+
+.name-input input[type="text"]:focus {
+    border-color: #0056b3; /* Muda a cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+.name-input button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Halant", sans-serif;
+}
+
+.name-input button:hover {
+    background-color: #0056b3;
+}
+
+.scoreboard {
+    margin-top: 10px;
+    text-align: left;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-top: 10px;  
+    padding-bottom: 10px; 
+    padding-left: 10px;  
+    padding-right: 10px; 
+    font-family: "Halant", sans-serif;
+}
