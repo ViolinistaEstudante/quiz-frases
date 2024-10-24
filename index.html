@@ -10,29 +10,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <h1>Quiz sobre o site de frases!!</h1>
-            <div id="question"></div>
-            <div id="options"></div>
-            <button id="nextBtn" onclick="nextQuestion()">Próxima</button>
-            <div id="feedback" class="feedback"></div>
-            <div id="endMessage" class="end-message"></div>
-            <div id="nameInput" class="name-input" style="display: none;">
-                <input type="text" id="playerName" placeholder="Digite seu nome" />
-                <button onclick="saveScore()">Salvar Recorde</button>
-            </div>
-            <div class="scoreboard"></div>
-        </div>
-        </div>
-    </div>
-
-    <div class="scoreboard-card">
-        <h2>Quadro de Recordes</h2>
-        <div id="scoreboard" class="scoreboard"></div>
-        <button onclick="clearScores()">Limpar Recordes</button>
-    </div>
-</div>
-    <script src="script.js"></script>
+	<!-- ADICIONADO A TAG MAIN -->
+	<!-- REMOVI ALGUNS FECHAMENTOS DE DIVS INCORRETOS -->
+	<main>
+	    <div class="container">
+	        <div class="card">
+	            <h1>Quiz sobre o site de frases!!</h1>
+	            <div id="question"></div>
+	            <div id="options"></div>
+	            <button id="nextBtn" onclick="nextQuestion()">Próxima</button>
+	            <div id="feedback" class="feedback"></div>
+	            <div id="endMessage" class="end-message"></div>
+	            <div id="nameInput" class="name-input" style="display: none;">
+	                <input type="text" id="playerName" placeholder="Digite seu nome" />
+	                <button onclick="saveScore()">Salvar Recorde</button>
+	            </div>
+	            <div class="scoreboard"></div>
+	        </div>
+	    </div>
+	
+	    <div class="scoreboard-card">
+	        <h2>Quadro de Recordes</h2>
+	        <div id="scoreboard" class="scoreboard"></div>
+	        <button onclick="clearScores()">Limpar Recordes</button>
+	    </div>
+	</main>
+<script src="script.js"></script>
 </body>
 </html>

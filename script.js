@@ -25,39 +25,45 @@ const questions = [
     },
     // Pergunta 5
     {
-        question: "Quantos continentes existem?",
-        options: ["5", "6", "7", "8"],
-        answer: 2
+        question: "Quem escreveu a frase: 'Sempre há um caminho quando há vontade.'",
+        options: ["Paulo Neruda", "Sócrates", "Pablo Picasso", "Carlos Drummond De Andrade"],
+        answer: 0
     },
     // Pergunta 6
     {
-        question: "Qual é a fórmula da água?",
-        options: ["H2O", "O2", "CO2", "NaCl"],
-        answer: 0
+        question: "Qual professor da nossa escola indicou a seguinte frase para o site? 'A vontade de se preparar precisa ser maior que a vontade de vencer.'",
+        options: ["Profª Elisabeth – História", "Profª Gabriela - Português", "Prof° Victor - Matemática", "Profª Elisângela - Português"],
+        answer: 3
     },
     // Pergunta 7
     {
-        question: "Qual é a moeda do Japão?",
-        options: ["Yen", "Won", "Dólar", "Euro"],
-        answer: 0
+        question: "Vencer é uma mistura de luta, esforço, otimismo e não desistir _____________. Qual é a palavra que completa a frase indicada pelo Prof° Élio – Biologia?",
+        options: ["Jamais", "Nunca", "Sempre", "Ás vezes"],
+        answer: 1
     },
     // Pergunta 8
     {
-        question: "pergunta-pergunta?",
-        options: ["x", "x", "x", "x"],
+        question: "A educação pode ser a única ponte entre você e _ _________. Qual palavra completa a frase indicada pela Profª Érica - Química",
+        options: [" O Sucesso", "A Conquista", "O Objetivo", "As Lutas"],
         answer: 0
     },
     // Pergunta 9
     {
-        question: "pergunta-per?",
-        options: ["x", "x", "x", "x"],
+        question: "União, dedicação, são fundamentais para o seu futuro. Essa frase foi dita pelo professor?",
+        options: ["Profº Luiz Paulo – Geografia", "Prof° Érica - Química", "Prof° Karol - Física", "Prof° Sidnei - Filosofia"],
         answer: 0
     },
     // Pergunta 10
     {
-        question: "pergunta-p?",
-        options: ["x", "x", "x", "x"],
-        answer: 0
+        question: "Qual é o nome do site que você está acessando agora?",
+        options: ["Escola e educação", "Chamado escolar", "Escola chamando", "Chamado da educação"],
+        answer: 1
+    },
+    // Pergunta 11
+    {
+        question: "O que está representado na imagem da frase 'Estude, pois a caneta é mais leve do que a pá' que foi indicada pela Profª Karol - Física?",
+        options: ["Uma pá", "Um trabalhador", "Uma caneta", "Uma foto da professora"],
+        answer: 1
     }
 ];
 
@@ -113,7 +119,7 @@ function selectOption(index) {
         feedbackElement.innerText = "Correto!";
         score++; // Incrementa o score
     } else {
-        feedbackElement.innerText = "Incorreto. Tente novamente.";
+        feedbackElement.innerText = "Incorreto. Aperte no botão PRÓXIMA.";
     }
 
     // Exibe o botão "Próxima" após selecionar uma resposta

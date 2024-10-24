@@ -1,19 +1,44 @@
+/* COLOQUE ISSO EM TODO PROJETO */
+@charset "UTF-8";
+
+/* O * SETA STYLES PARA TODOS ELEMENTOS
+- TODOS ELEMENTOS VEM COM UM PADDING E MARGIN BASE, ISSO REMOVE ELES PARA EVITAR COMPORTAMENTO INESPERADO
+*/
+* {
+	margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* ------------ */
+
 body {
-    margin: 0;
-    padding: 0;
     background-color: #2f59da; /* Fundo azul */
     font-family: "Halant", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100vw; /* ADICIONANDO LARGURA DA VIEWPORT */
     height: 100vh;
 }
 
-.container {
+body, 
+main,
+.container, 
+.scoreboard-card {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+
+main {
+	width: 100%;
+	gap: 30px;
+	
+}
+
 
 .card {
     background-color: white; /* Card branco */
@@ -29,9 +54,13 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    /* AO INVES DE DEFINIR WIDTH FIXO, USE MAX-WIDTH*/
+    width: 100%;
+    max-width: 300px;
+    
     text-align: left; /* Alinhamento à esquerda para o quadro de recordes */
-    margin-left: 40px; /* Distância maior entre os cards */
+    
+    /* REMOVI O MARGIN */
 }
 
 button {
