@@ -19,47 +19,41 @@ const questions = [
     },
     // Pergunta 4
     {
-        question: "Por quem foi criado o site e o quiz?",
-        options: ["Brendow Rodrigues", "2°C", "Profª Gabriela", "Nenhuma"],
-        answer: 0
-    },
-    // Pergunta 5
-    {
         question: "Quem escreveu a frase: 'Sempre há um caminho quando há vontade.'",
         options: ["Paulo Neruda", "Sócrates", "Pablo Picasso", "Carlos Drummond De Andrade"],
         answer: 0
     },
-    // Pergunta 6
+    // Pergunta 5
     {
         question: "Qual professor da nossa escola indicou a seguinte frase para o site? 'A vontade de se preparar precisa ser maior que a vontade de vencer.'",
         options: ["Profª Elisabeth – História", "Profª Gabriela - Português", "Prof° Victor - Matemática", "Profª Elisângela - Português"],
         answer: 3
     },
-    // Pergunta 7
+    // Pergunta 6
     {
         question: "Vencer é uma mistura de luta, esforço, otimismo e não desistir _____________. Qual é a palavra que completa a frase indicada pelo Prof° Élio – Biologia?",
         options: ["Jamais", "Nunca", "Sempre", "Ás vezes"],
         answer: 1
     },
-    // Pergunta 8
+    // Pergunta 7
     {
         question: "A educação pode ser a única ponte entre você e _ _________. Qual palavra completa a frase indicada pela Profª Érica - Química",
         options: [" O Sucesso", "A Conquista", "O Objetivo", "As Lutas"],
         answer: 0
     },
-    // Pergunta 9
+    // Pergunta 8
     {
         question: "União, dedicação, são fundamentais para o seu futuro. Essa frase foi dita pelo professor?",
         options: ["Profº Luiz Paulo – Geografia", "Prof° Érica - Química", "Prof° Karol - Física", "Prof° Sidnei - Filosofia"],
         answer: 0
     },
-    // Pergunta 10
+    // Pergunta 9
     {
         question: "Qual é o nome do site que você está acessando agora?",
         options: ["Escola e educação", "Chamado escolar", "Escola chamando", "Chamado da educação"],
         answer: 1
     },
-    // Pergunta 11
+    // Pergunta 10
     {
         question: "O que está representado na imagem da frase 'Estude, pois a caneta é mais leve do que a pá' que foi indicada pela Profª Karol - Física?",
         options: ["Uma pá", "Um trabalhador", "Uma caneta", "Uma foto da professora"],
@@ -86,12 +80,12 @@ function loadQuestion() {
     const feedbackElement = document.getElementById('feedback');
     const endMessageElement = document.getElementById('endMessage');
     const nameInputElement = document.getElementById('nameInput');
-    const nextButton = document.getElementById('nextButton'); // Referência ao botão "Próxima"
+    const nextButton = document.getElementById('nextBtn'); // Referência corrigida para 'nextBtn'
 
     feedbackElement.innerText = ''; // Limpa o feedback
     endMessageElement.innerText = ''; // Limpa a mensagem de fim
 
-    if (currentQuestion < questions.length) { // Usa o comprimento do array
+    if (currentQuestion < questions.length) {
         questionElement.innerText = questions[currentQuestion].question;
         optionsElement.innerHTML = '';
 
@@ -105,7 +99,7 @@ function loadQuestion() {
 
         nextButton.style.display = 'none'; // Esconde o botão "Próxima"
     } else {
-        endMessageElement.innerText = `Fim do quiz! Você acertou ${score} de ${questions.length}.`; // Atualiza para 10 perguntas
+        endMessageElement.innerText = `Fim do quiz! Você acertou ${score} de ${questions.length}.`;
         questionElement.innerText = ''; // Limpa a pergunta
         optionsElement.innerHTML = ''; // Limpa as opções
         nameInputElement.style.display = 'block'; // Exibe o campo para inserir nome
@@ -113,21 +107,40 @@ function loadQuestion() {
     }
 }
 
+// Função para desabilitar todos os botões de opções
+function disableOptions() {
+    const optionButtons = document.querySelectorAll('.option');
+    optionButtons.forEach(button => {
+        button.disabled = true;
+    });
+}
+
+// Função para habilitar todos os botões de opções
+function enableOptions() {
+    const optionButtons = document.querySelectorAll('.option');
+    optionButtons.forEach(button => {
+        button.disabled = false;
+    });
+}
+
 function selectOption(index) {
     const feedbackElement = document.getElementById('feedback');
     if (index === questions[currentQuestion].answer) {
         feedbackElement.innerText = "Correto!";
         score++; // Incrementa o score
+        enableOptions(); // Habilita as opções para a próxima pergunta
     } else {
         feedbackElement.innerText = "Incorreto. Aperte no botão PRÓXIMA.";
+        disableOptions(); // Desabilita as opções até que a próxima pergunta seja carregada
     }
 
     // Exibe o botão "Próxima" após selecionar uma resposta
-    document.getElementById('nextButton').style.display = 'block';
+    document.getElementById('nextBtn').style.display = 'block';
 }
 
 function nextQuestion() {
     currentQuestion++;
+    enableOptions(); // Reabilita os botões para a próxima pergunta
     loadQuestion();
 }
 
@@ -154,11 +167,6 @@ function displayScoreboard() {
         scoreItem.innerText = `${scoreEntry.name}: ${scoreEntry.score}`;
         scoreboardElement.appendChild(scoreItem);
     });
-}
-
-function clearScores() {
-    localStorage.removeItem('scores'); // Remove todos os scores armazenados
-    displayScoreboard(); // Atualiza o quadro de recordes para refletir a remoção
 }
 
 // Carrega a primeira pergunta
