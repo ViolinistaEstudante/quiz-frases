@@ -14,7 +14,7 @@
 
 body {
     background-color: #2f59da; /* Fundo azul */
-    font-family: "Halant", sans-serif;
+    font-family: "Lexend", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +37,10 @@ main {
 	width: 100%;
 	gap: 30px;
 	
+}
+
+.card h1 {
+    padding-bottom: 7px;
 }
 
 
@@ -71,7 +75,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: "Halant", sans-serif;
+    font-family: "Lexend", sans-serif;
 }
 
 button:hover {
@@ -85,7 +89,7 @@ button:hover {
     background-color: #1ea1ac;
     border-radius: 5px;
     cursor: pointer;
-    font-family: "Halant", sans-serif;
+    font-family: "Lexend", sans-serif;
 }
 
 .option:hover {
@@ -97,7 +101,7 @@ button:hover {
     margin-top: 10px;
     font-weight: bold;
     height: 20px; /* Para manter o espaço para feedback */
-    font-family: "Halant", sans-serif;
+    font-family: "Lexend", sans-serif;
 }
 
 .end-message {
@@ -106,7 +110,7 @@ button:hover {
     font-weight: bold;
     color: #FF0000; /* Cor da mensagem de fim */
     font-size: 18px; /* Tamanho da fonte */
-    font-family: "Halant", sans-serif;
+    font-family: "Lexend", sans-serif;
 }
 
 .name-input input[type="text"] {
@@ -147,5 +151,5 @@ button:hover {
     padding-bottom: 10px; 
     padding-left: 10px;  
     padding-right: 10px; 
-    font-family: "Halant", sans-serif;
+    font-family: "Lexend", sans-serif;
 }

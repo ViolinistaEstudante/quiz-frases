@@ -1,62 +1,62 @@
 const questions = [
     // Pergunta 1
     {
-        question: "Quantas frases de autores externos temos no nosso site?",
-        options: ["6", "7", "8", "9"],
-        answer: 1
+        question: "Qual a cor predominante do site?",
+        options: ["Azul", "Amarelo", "Verde", "Branco"],
+        answer: 0
     },
     // Pergunta 2
     {
-        question: "Quantos professores de geografia tem sua frase no site?",
-        options: ["Nenhum", "2", "3", "4"],
-        answer: 1
+        question: "Segundo a Prof° Karol: 'Estude, pois a _________ é mais leve do que a pá' Qual a alternativa que completa a lacuna?",
+        options: ["Inteligência", "Lápis", "Sabedoria", "Caneta"],
+        answer: 3
     },
     // Pergunta 3
     {
-        question: "'Superação é quando te amassa a alma, e você ainda briga.', de quem é essa frase?",
-        options: ["Profª Gabriela", "Profª Elizabeth", "Profª Danielli", "Profª Elisângela"],
+        question: "Por quem foi dita a frase 'O que você está fazendo por você?'",
+        options: ["Profª Maria Marli", "Profª Marisa", "Prof° Sidnei", "Prof° Victor"],
         answer: 2
     },
     // Pergunta 4
     {
-        question: "Quem escreveu a frase: 'Sempre há um caminho quando há vontade.'",
-        options: ["Paulo Neruda", "Sócrates", "Pablo Picasso", "Carlos Drummond De Andrade"],
-        answer: 0
+        question: "Qual o nome do site que você está acessando agora?",
+        options: ["Chamado Escolar", "Chamado Da Educação", "Quiz - Chamado Escolar", "Frases De Motivação"],
+        answer: 2
     },
     // Pergunta 5
     {
-        question: "Qual professor da nossa escola indicou a seguinte frase para o site? 'A vontade de se preparar precisa ser maior que a vontade de vencer.'",
-        options: ["Profª Elisabeth – História", "Profª Gabriela - Português", "Prof° Victor - Matemática", "Profª Elisângela - Português"],
-        answer: 3
+        question: "'A educação pode ser a única ponte entre você e ___________'. Qual palavra completa a frase indicada pela Profª Érica?",
+        options: ["O Otimismo", "O Sucesso", "As Lutas", "O Desafio"],
+        answer: 1
     },
     // Pergunta 6
     {
-        question: "Vencer é uma mistura de luta, esforço, otimismo e não desistir _____________. Qual é a palavra que completa a frase indicada pelo Prof° Élio – Biologia?",
-        options: ["Jamais", "Nunca", "Sempre", "Ás vezes"],
-        answer: 1
+        question: "'Superação é quando te amassa a alma, e você ainda briga.' Essa frase foi dita pelo(a) professor(a)?",
+        options: ["Profª Karine", "Profª Marisa", "Profª Danielli", "Profª Érica"],
+        answer: 2
     },
     // Pergunta 7
     {
-        question: "A educação pode ser a única ponte entre você e _ _________. Qual palavra completa a frase indicada pela Profª Érica - Química",
-        options: [" O Sucesso", "A Conquista", "O Objetivo", "As Lutas"],
-        answer: 0
+        question: "Qual imagem acompanha a frase: 'Estude, pois a caneta é mais leve do que a pá', dita pela Profª Karol?",
+        options: ["Uma Pá", "Um Trabalhador", "Uma Caneta", "Uma Foto Da Professora"],
+        answer: 2
     },
     // Pergunta 8
     {
-        question: "União, dedicação, são fundamentais para o seu futuro. Essa frase foi dita pelo professor?",
-        options: ["Profº Luiz Paulo – Geografia", "Prof° Érica - Química", "Prof° Karol - Física", "Prof° Sidnei - Filosofia"],
+        question: "'Vencer é uma mistura de luta, esforço, otimismo e não desistir _____________'. Qual é a palavra que completa a frase indicada pelo Prof° Élio?",
+        options: ["Nunca", "Jamais", "Sempre", "Ás vezes"],
         answer: 0
     },
     // Pergunta 9
     {
-        question: "Qual é o nome do site que você está acessando agora?",
-        options: ["Escola e educação", "Chamado escolar", "Escola chamando", "Chamado da educação"],
+        question: "Espero que você analisou bem o site... No site, há a presença de uma logo dos colégios cívicos militares?",
+        options: ["Sim", "Não"],
         answer: 1
     },
     // Pergunta 10
     {
-        question: "O que está representado na imagem da frase 'Estude, pois a caneta é mais leve do que a pá' que foi indicada pela Profª Karol - Física?",
-        options: ["Uma pá", "Um trabalhador", "Uma caneta", "Uma foto da professora"],
+        question: "Qual é o objetivo principal do site 'Chamado Escolar'?",
+        options: ["Fornecer dicas de estudo", "Compartilhar frases motivacionais para os estudos", "Oferecer cursos online de motivação", "Divulgar notícias sobre educação"],
         answer: 1
     }
 ];
